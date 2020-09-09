@@ -29,7 +29,10 @@ class List(db.Model)
     ## rain
     __RAIN__ = db.Column(db.Integer, db.ForeignKey('OpenWeatherApi.Rain.__id__'))
     rain = db.relationship('Rain', back_populates='lists')
+
     ## snow
+    __SNOW__ = db.Column(db.Integer, db.ForeignKey('OpenWeatherApi.Snow.__id__'))
+    snow = db.relationship('Snow', back_populates='lists')
 
     visibility = db.Column(db.Integer)
     pop = db.Column(db.Float)
