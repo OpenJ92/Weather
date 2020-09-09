@@ -1,5 +1,6 @@
 from schema.config import db
 
+## This is a 4-day forcast
 class Current_Weather_Response(db.Model):
     __tablename__ = "Current_Weather_Response"
     __table_args__ = {"schema": "OpenWeatherApi"}
