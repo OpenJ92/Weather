@@ -2,7 +2,7 @@ from schema.config import db
 
 class Wind(db.Model):
     __tablename__ = "Wind"
-    __table_args__ = {"schema": "OpenWeatherApi"}
+    __table_args__ = {"schema": "openweatherapi"}
 
     __id__ = db.Column(db.Integer, primary_key = True)
 
