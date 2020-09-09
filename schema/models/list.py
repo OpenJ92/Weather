@@ -12,9 +12,12 @@ class List(db.Model)
 
     ## main
     __MAIN__ = db.Column(db.Integer, db.ForeignKey('OpenWeatherApi.Main.__id__'))
-    main = db.relationship('Main', back_populates='list')
+    main = db.relationship('Main', back_populates='lists')
 
     ## weather
+    __WEATHER__ = db.Column(db.Integer, db.ForeignKey('OpenWeatherApi.Weather.__id__'))
+    weather = db.relationship('Weather', back_populates='lists')
+
     ## clouds
     ## wind
     ## rain
