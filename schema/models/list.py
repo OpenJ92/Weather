@@ -19,6 +19,9 @@ class List(db.Model)
     weather = db.relationship('Weather', back_populates='lists')
 
     ## clouds
+    __CLOUDS__ = db.Column(db.Integer, db.ForeignKey('OpenWeatherApi.Clouds.__id__'))
+    clouds =  db.relationship('Clouds', back_populates='lists')
+
     ## wind
     ## rain
     ## snow
